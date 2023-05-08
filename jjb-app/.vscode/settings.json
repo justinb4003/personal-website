@@ -1,0 +1,24 @@
+{
+    "python.envFile": "${workspaceFolder}/.databricks/.databricks.env",
+    "databricks.python.envFile": "${workspaceFolder}/.env",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#11e8f8",
+        "activityBar.background": "#11e8f8",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#f926ea",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#11e8f8",
+        "statusBar.background": "#06c2d0",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#05949e",
+        "statusBarItem.remoteBackground": "#06c2d0",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#06c2d0",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#06c2d099",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#06c2d0"
+}

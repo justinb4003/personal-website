@@ -1,2 +1,42 @@
-Hello world
-<router-outlet></router-outlet>
+<mat-sidenav-container [hasBackdrop]="!media.isActive('gt-sm')"
+     fxLayout="row" fxLayoutAlign="start stretch" fxFlexFill autosize
+     role="main" class="main-container">
+  <mat-sidenav [mode]="media.isActive('gt-sm') ? 'side' : 'over'"
+               [opened]="media.isActive('gt-sm')"
+               [disableClose]="media.isActive('gt-sm')"
+               class="main-sidenav"
+               #sidenav>
+    <div class="menu-container">
+      <div class="menu-header">
+        <img src="/assets/justin_duck_profile.jpg" class="profile-pic">
+      </div>
+      <mat-nav-list>
+        <a routerLink="/projects" mat-list-item routerLinkActive="active" class="menu-link"
+          (click)="this.sidenav.mode === 'side' || this.sidenav.close()">
+          <mat-icon class="menu-icon">work_history</mat-icon>Projects
+        </a>
+      </mat-nav-list>
+   </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <mat-toolbar-row class="main-toolbar">
+        <button mat-icon-button [fxShow]="!media.isActive('gt-sm')"
+                (click)="this.displaySidenavMenu()"><mat-icon aria-label="Menu">menu</mat-icon></button>
+        <div class="data-key-header">
+        </div>
+        <div class="app-version">
+        </div>
+
+        <span class="toolbar-spacer"></span>
+        <body class="mat-body">
+        </body>
+        <mat-icon (click)="this.goToSettings()">settings</mat-icon>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <main class="main-router-outlet">
+      <router-outlet>
+      </router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
